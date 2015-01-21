@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html ng-app="quoteBook">
+<head>
+	<title>quoteBook</title>
+	<link rel="stylesheet" href="style.css"></link>
+</head>
+<body ng-Controller="mainCtrl">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+
+<div ng-repeat="quote in quotes | filter: search">
+	<p>{{quote.text}} - {{quote.author}}</p>
+</div>
+
+<input ng-model="addTo" placeholder="Enter quote to add"></input>
+<input ng-model="author" placeholder="Enter Author"></input>
+<input ng-model="removeFrom" placeholder="Enter quote to remove"></input>
+<input ng-model="search" placeholder="Filter by"></input>
+
+<br>
+<button ng-click="addData()">Add Quote</button>  
+<button ng-click="removeData()">Remove Quote</button> 
+<button ng-click>Filter Quotes</button>
+
+
+
+<script src="/Users/Centrum/Desktop/dvmtn/quoteBook/js/app.js"></script>
+<script src="/Users/Centrum/Desktop/dvmtn/quoteBook/js/mainCtrl.js"></script>
+<script src ="/Users/Centrum/Desktop/dvmtn/quoteBook/js/dataService.js"></script>
+</body>
+
+
+</html>
+
+
+
